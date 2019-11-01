@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head><title>botoes, links e entrada de texto</title></h:head> 
+<h:body> 
+	
+	<h:form id="formulario">
+	
+	<h:commandButton action="#{controleComponentes.executar()}" 
+					 actionListener="#{controleComponentes.listerner}"
+					 value="Executar" id="btnExecutar" />
+					 
+	<h:commandLink action="#{controleComponentes.executar()}" 
+					 actionListener="#{controleComponentes.listerner}" 
+					 onclick="alert('o botao foi acionado')"
+					 value="Executar" id="cmdExecutar" />
+	<br/>
+	<h:button outcome="login" value="pagina de login"/>	
+	<br/>
+	<h:link outcome="login" value="pagina de login"/>
+	
+	</h:form>
+	
+	<h:outputText value="#{controleComponentes.idComponente}" /> <br/>
+	<h:outputLink value="https://sistemas.faespsenar.com.br/sicp">
+		sicp
+	</h:outputLink>
+	
+</h:body> 
+</html>
