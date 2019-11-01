@@ -17,14 +17,20 @@ public class ControleEntrada implements Serializable{
 	private String obs;
 	private String grauInstrucao;
 	private String saida;
-	
 	private List<String> grausInstrucao = new ArrayList<String>();
+	private List<String> tecnologias = new ArrayList<String>();
+	private List<String> selecionadas = new ArrayList<String>();
 
 	public ControleEntrada() {
 		id = 1;
 		grausInstrucao.add("Ensino fundamental");
 		grausInstrucao.add("Ensino medio");
 		grausInstrucao.add("Ensino superior");
+		tecnologias.add("JSF");
+		tecnologias.add("JPA");
+		tecnologias.add("XHTML");
+		tecnologias.add("JAVA");
+		
 	}
 	
 	public String processa() {
@@ -34,6 +40,10 @@ public class ControleEntrada implements Serializable{
 		saida += "senha: " + senha + "<br/>";
 		saida += "obs: " + obs + "<br/>";
 		saida += "grau de instrução: " + grauInstrucao + "<br/>";
+		saida += "Tecnologias: ";
+		for (String s : selecionadas) {
+			saida += s + " - ";
+		}
 		
 		return "componentesParte5";
 	}
@@ -92,6 +102,22 @@ public class ControleEntrada implements Serializable{
 
 	public void setGrausInstrucao(List<String> grausInstrucao) {
 		this.grausInstrucao = grausInstrucao;
+	}
+
+	public List<String> getTecnologias() {
+		return tecnologias;
+	}
+
+	public void setTecnologias(List<String> tecnologias) {
+		this.tecnologias = tecnologias;
+	}
+
+	public List<String> getSelecionadas() {
+		return selecionadas;
+	}
+
+	public void setSelecionadas(List<String> selecionadas) {
+		this.selecionadas = selecionadas;
 	}
 	
 	

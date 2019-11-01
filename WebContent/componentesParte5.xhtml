@@ -26,16 +26,17 @@
 		  					 cols="30" rows="6" id="obs" />
 		  					 
 		  	<h:outputLabel value="Grau instrução" for="grau" />
-		  	<h:selectOneMenu value="#{controleEntrada.grauInstrucao}"
-		  					 id="grau">
-		  		<f:selectItem itemLabel="-- selecione -- " noSelectionOption="true"/>
-<!-- 		  		gerado de maneira estatico -->
-<!-- 		  		<f:selectItem itemLabel="Ensino Fundamental" itemValue="Ensino Fundamental"/> -->
-<!-- 		  		<f:selectItem itemLabel="Ensino Medio" itemValue="Ensino Medio"/> -->
-<!-- 		  		<f:selectItem itemLabel="Ensino Superior" itemValue="Ensino Superior"/> -->
+		  	<h:selectOneListbox value="#{controleEntrada.grauInstrucao}"
+		  					  id="grau">
 		  		<f:selectItems var="item" value="#{controleEntrada.grausInstrucao}"
 		  					   itemValue="#{item}" itemLabel="#{item}"/>
-		  	</h:selectOneMenu>
+		  	</h:selectOneListbox>
+		  	
+		  	<h:outputLabel value="Tecnologias" for="tec"/>
+		  	<h:selectManyListbox value="#{controleEntrada.selecionadas}">
+				<f:selectItems var="item" value="#{controleEntrada.tecnologias}"
+							   itemValue="#{item}" itemLabel="#{item}"/>
+		  	</h:selectManyListbox>
 		  	
 			<h:column>
 				<div align="center">
@@ -44,7 +45,27 @@
 				</div>
 			</h:column>
 		</h:panelGrid>
-	
+		
+		
+<!-- 			Componente selectOneRadio grau de instrução -->
+<!-- 			<h:selectOneRadio value="#{controleEntrada.grauInstrucao}" -->
+<!-- 		  					  id="grau" layout="lineDirection"> -->
+<!-- 		  		<f:selectItems var="item" value="#{controleEntrada.grausInstrucao}" -->
+<!-- 		  					   itemValue="#{item}" itemLabel="#{item}"/> -->
+<!-- 		  	</h:selectOneRadio> -->
+		
+<!-- 				Componente selectOneMenu grau de instrução -->
+<!-- 			  	<h:selectOneMenu value="#{controleEntrada.grauInstrucao}" -->
+<!-- 		  					 id="grau"> -->
+<!-- 		  		<f:selectItem itemLabel=" selecione  " noSelectionOption="true"/> -->
+<!-- 		  		gerado de maneira estatico -->
+<!-- 		  		<f:selectItem itemLabel="Ensino Fundamental" itemValue="Ensino Fundamental"/> -->
+<!-- 		  		<f:selectItem itemLabel="Ensino Medio" itemValue="Ensino Medio"/> -->
+<!-- 		  		<f:selectItem itemLabel="Ensino Superior" itemValue="Ensino Superior"/> -->
+<!-- 		  		gerado de maneira dinamica -->
+<!-- 		  		<f:selectItems var="item" value="#{controleEntrada.grausInstrucao}" -->
+<!-- 		  					   itemValue="#{item}" itemLabel="#{item}"/> -->
+<!-- 		  	</h:selectOneMenu> -->
 	
 	</h:form>
 	
