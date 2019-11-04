@@ -41,7 +41,7 @@ public class ControlePessoa implements Serializable{
 		saida = "";
 		saida += "Valores recebidos: ";
 		saida += "<br/>" + (pessoaFisica ? "Nome: "+ nome : "Razão Social: "+ nome );
-		saida += "<br/>" + (pessoaFisica ? "CPF: "+ cpf : "CNPJ: "+ cnpj );
+		saida += "<br/>" + (pessoaFisica ? "CPF: " + cpf : "CNPJ: " + cnpj );
 		FacesMessage msg = new FacesMessage("Dados recebidos com sucesso!");
 		FacesContext.getCurrentInstance().addMessage(null, msg);
 		return "dadosPessoa";
