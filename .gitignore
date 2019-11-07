@@ -3,3 +3,4 @@
 .settings/
 .build
 .tern-project
+/build/
