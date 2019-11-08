@@ -1,32 +1,36 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html"> 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
 
-<h:head>
-	<title>tabelas Com Estilos CSS</title>
-	<h:outputStylesheet library="css" name="estilos.css"/>
-
-</h:head> 
-<h:body> 
+	<ui:composition template="/templates/template.xhtml">
 	
-	<h:dataTable value="#{controleTabela.lista}" var="obj" 
-				 captionClass="tituloTabela" 
-				 styleClass="tabela"
-				 headerClass="tabelaCabecalho"
-				 footerClass="tabelaRodape">
-				 
-		<f:facet name="caption">Terceiro exemplo com dataTable</f:facet>
+		<ui:define name="tituloJanela">
+			Tabelas Com Estilos CSS
+		</ui:define>
 		
-		<f:facet name="header">Listagem de pessoas</f:facet>
+		<ui:define name="conteudo">
 		
-		<f:facet name="footer">Total de registros: #{controleTabela.lista.size()}</f:facet>
+			<h:dataTable value="#{controleTabela.lista}" var="obj" 
+					 captionClass="tituloTabela" 
+					 styleClass="tabela"
+					 headerClass="tabelaCabecalho"
+					 footerClass="tabelaRodape">
+					 
+			<f:facet name="caption">Terceiro exemplo com dataTable</f:facet>
+			
+			<f:facet name="header">Listagem de pessoas</f:facet>
+			
+			<f:facet name="footer">Total de registros: #{controleTabela.lista.size()}</f:facet>
+			
+			<h:column>#{obj.id}</h:column>
+			<h:column>#{obj.nome}</h:column>
+			<h:column>#{obj.telefone}</h:column>
 		
-		<h:column>#{obj.id}</h:column>
-		<h:column>#{obj.nome}</h:column>
-		<h:column>#{obj.telefone}</h:column>
-	
-	</h:dataTable>
-</h:body> 
+			</h:dataTable>
+		
+		</ui:define>
+		
+	</ui:composition>
 </html>
