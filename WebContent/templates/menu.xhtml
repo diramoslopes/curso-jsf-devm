@@ -2,14 +2,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html"> 
-	
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:devmedia="http://java.sun.com/jsf/composite/devmedia">
+  
+	 <devmedia:linkImagem acao="#{controlePrincipal.home()}"
+	 					  imagem="home2.png" biblioteca="images"/>
+	 	
 	 <h:form>
 	 	<h:panelGrid columns="1">
 	 		<h:commandLink action="/index" value="Home" />
 	 		<h:commandLink action="/tabelas/tabelasComEstilosCSS" value="Tabelas com estilos" />
 	 		<h:commandLink action="/tabelas/tabelaEditavel" value="Tabelas editavel" />
-	 		
+	 		<h:commandLink action="/meusComponentes" value="Componentes" />
 	 	</h:panelGrid>
 	 </h:form>
 	

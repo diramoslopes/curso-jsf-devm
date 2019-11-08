@@ -11,8 +11,11 @@ import javax.faces.bean.SessionScoped;
 @SessionScoped
 public class ControlePrincipal implements Serializable {
 	
-	
 	private String mensagens;
+	
+	public String home() {
+		return "/index";
+	}
 
 	public ControlePrincipal() {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss:S");
