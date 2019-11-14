@@ -10,12 +10,15 @@
 	 	
 	 <h:form>
 	 	<h:panelGrid columns="1">
-	 		<h:commandLink action="/index" value="Home" />
-	 		<h:commandLink action="/tabelas/tabelasComEstilosCSS" value="Tabelas com estilos" />
-	 		<h:commandLink action="/tabelas/tabelaEditavel" value="Tabelas editavel" />
-	 		<h:commandLink action="/meusComponentes" value="Componentes" />
-	 		<h:commandLink action="/formValidacaoHibernate" value="Validacao Hibernate" />
-	 		<h:commandLink action="#{controleCRUDAjax.listar()}" value="Crud AJAX" />
+	 		<h:commandLink action="/index" value="#{msgs['menu.home']}" />
+	 		<h:commandLink action="/tabelas/tabelasComEstilosCSS" value="#{msgs['menu.tabelas_estilos']}" />
+	 		<h:commandLink action="/tabelas/tabelaEditavel" value="#{msgs['menu.tabela_editavel']}" />
+	 		<h:commandLink action="/meusComponentes" value="#{msgs['menu.componentes']}" />
+	 		<h:commandLink action="/formValidacaoHibernate" value="#{msgs['menu.validacao_hibernate']}" />
+	 		<h:commandLink action="#{controleCRUDAjax.listar()}" value="#{msgs['menu.crud_ajax']}" />
+	 		
+	 		<h:commandLink action="#{controleLocale.portugueseLocale()}" value="Portugues" />
+	 		<h:commandLink action="#{controleLocale.englishLocale()}" value="English" />
 	 	</h:panelGrid>
 	 </h:form>
 	

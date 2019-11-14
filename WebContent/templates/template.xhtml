@@ -3,7 +3,9 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html">
-
+	
+	<f:view contentType="text/html" encoding="ISO-8859-1" locale="#{controleLocale.currentLocale}">
+	
 	<h:head>
 		<title>
 			<ui:insert name="tituloJanela"/>
@@ -27,4 +29,5 @@
 		
 	</h:body>
 	
+	</f:view>
 	</html>
