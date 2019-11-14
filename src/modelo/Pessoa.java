@@ -10,8 +10,8 @@ public class Pessoa implements Serializable{
 	
 	private Integer id;
 	
-	@Length(max = 40, message = "O nome não pode ter mais que {max} caracteres" )
 	@NotEmpty(message = "O nome deve ser informado")
+	@Length(max = 40, message = "O nome não pode ter mais que {max} caracteres" )
 	private String nome;
 	
 	@Email(message = "Informe um email valido")
